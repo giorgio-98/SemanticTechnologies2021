@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+}
+
+.mySlides {
+  display: none;
+}
+
+.slideshow-container img {
+  vertical-align: middle;  /* L'elelemento è piazzato in mezzo all'elemento genitore */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 500px;
+  height: 250px;
+  display: block;
+  margin-top: 2%;
+  margin-left: auto;         /*per centrare il container settiamo i margini destro e sinistro ad auto e lo mostriamo come un blocco*/
+  margin-right: auto;
+  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #1034A6;
+  display: inline-block;
+  transition: 0.6s ease;
+  border-radius: 50%;
+}
+/* Transition consente di modificare i valori delle proprietà, per una determinata durata.
+Ease specifica un effetto di transizione con un avvio lento, poi veloce, che termina lentamente (default)*/
+
+.active {
+  background-color: rgb(243, 121, 113);
+}
+
+/* Fading animation */
+
+/* Cosa sono le animazioni CSS?
+Un'animazione consente a un elemento di cambiare gradualmente da uno stile all'altro.
+Per usare l'animazione CSS, bisogna prima specificare alcuni fotogrammi chiave per l'animazione.
+I fotogrammi chiave contengono gli stili che l'elemento avrà in determinati momenti. */
+
+/* La proprietà animation-duration definisce il tempo necessario per il completamento 
+di un'animazione. Se la proprietà animation-duration non è specificata, non si verificherà alcuna animazione,
+poiché il valore predefinito è 0s.
+*/
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+/* Quando vengono specificati gli stili CSS all'interno della regola @keyframes, l'animazione
+cambierà gradualmente dallo stile corrente al nuovo stile in determinati momenti.
+*/
+
+/* Specifichiamo quando lo stile cambierà usando le parole chiave "from" e "to"
+(che rappresenta lo 0% (inizio) e il 100% (completo)).
+*/
+
+/* WebKit è un motore di rendering per browser web utilizzato per il rendering delle pagine web.
+Molti browser basati su Webkit utilizzano ancora la versione con prefisso -webkit- di entrambe le animazioni,
+i fotogrammi chiave e le transizioni. Fino a quando non adottano la versione standard, è consigliabile includere
+nel codice sia versioni non prefissate che Webkit.
+*/
+
+@-webkit-keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
